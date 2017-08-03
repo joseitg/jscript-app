@@ -1,14 +1,18 @@
-var client = {
-    'name':'Lucy',
-    'age':'23',
-    'address':'Japan'
-};
-console.log(client);
+const { app, BrowserWindow } = require('electron')
 
-var contains = false;
-var word = "nacho cheese";
+app.on('ready', () => {
+  let main = null
+  main = new BrowserWindow({
+    show: false, 
+    frame: true,
+  });
+  
+  main.webContents.once('dom-ready', () => {
+      console.log('main loaded')
+      main.show()
+      main.webContents.openDevTools({mode:"undocked"})
+  })
 
-for (var letter of word) {
-    contains = (letter=== "a") || contains;
-};
-console.log(contains);
+  main.loadURL('file://' + __dirname + '/index.html');
+})
+>>>>>>> origin/master
