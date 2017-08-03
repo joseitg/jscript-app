@@ -15,4 +15,3 @@ app.on('ready', () => {
 
   main.loadURL('file://' + __dirname + '/index.html');
 })
->>>>>>> origin/master
