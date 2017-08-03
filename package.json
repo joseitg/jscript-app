@@ -4,7 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ZeroPR/jscript-app/issues"
   },
-  "homepage": "https://github.com/ZeroPR/jscript-app#readme"
+  "homepage": "https://github.com/ZeroPR/jscript-app#readme",
+  "devDependencies": {
+    "electron": "^1.6.11"
+  }
 }
